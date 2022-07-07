@@ -45,6 +45,7 @@ a{
     border-spacing: 0;
   }
 
+/* card flip 효과 */
 .b_wrap {
     padding: 200px 0;
     overflow: hidden;
@@ -71,7 +72,6 @@ a{
 
 .title, .subTitleEng {
     font-family: 'Noto Sans KR', sans-serif;
-    white-space: nowrap;
 }
 
 .title {    
@@ -107,7 +107,7 @@ a{
     height: 65.45px;
 }
 
-/* card flip css */
+/* card flip css rotate */
 .flip { /* 카드 */
     display: inline-block;
     box-sizing: border-box;
@@ -119,16 +119,13 @@ a{
     max-width: 308px;
     transform-style: preserve-3d;
     transform: rotateY(0deg);
-    transition: 1s;
     perspective: 1000rem;
     /* 보고 있는 요소의 위치를 추정하여 원근감으로 3D환경 조성
        3D transform과 같이 자주 사용 */
 }
 
 .front a { /* 카드 내 중간정렬 */
-    text-align: center;
-    height: 100%;
-    width: 100%;
+    /* text-align: center; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -137,8 +134,6 @@ a{
 }
 
 .flip_item {
-    width: 100%;
-    height: 100%;
     visibility: visible;
 }
 
@@ -148,6 +143,7 @@ a{
 
 .front{
     position: absolute;
+    transition: 1s;
     transform: rotateY(0deg);
 }
 
@@ -183,19 +179,17 @@ a{
     color: #ffffff;
     font-weight: 400;
     line-height: 1.8;
-    white-space: nowrap;
 }
 
 
 @media (max-width:940px) {
-    .b_wrap{height: 875.19px;}
-    .business_list {width: 100%;}
+    .b_wrap {max-width: 940px; padding: 100px 0;}
+    .business_list {flex-wrap: wrap;}
     .flip {
-        justify-content: center;
-        width: calc(100% / 2 - 3%);
+        width: calc(100% / 2 - 4%);
         height: 300px;
-        margin-bottom: 30px;
-
+        /* margin-bottom: 30px; */
+        margin: 2%;
     }
     .front a{
         margin-top: 15%;
@@ -207,14 +201,19 @@ a{
     }
 }
 
+/* @media screen and (max-width: 767px) {
+	.b_wrap{max-width: 100%; margin: 0 auto; height: auto; padding: 40px 0;}
+	.b_wrap .busi_content_wrap {padding: 60px 20px;}    
+} */
+
 @media (max-width:640px) {
+    .b_wrap {padding: 100px 0;}
     .title {font-size: 20px;}
     .subTitleEng {font-size: 13px;}
     .flip {
         margin-bottom: 15px;
         padding: 0;
-        justify-content: center;
-        width: 276px; height: 250px;
+        width: calc(100% / 2 - 3%); height: 250px;
     }
     .img_wrap img {
         width: 80px;
@@ -225,7 +224,7 @@ a{
         height: 65.44px;
     }
     .darken {
-        height: 250px;
+        height: 300px;
         width: 100%;
     } 
     .front a{
@@ -235,7 +234,6 @@ a{
 
 @media (max-width:430px) {
     .flip {
-        justify-content: center;
         width: 374.41px;
         height: 250px;
     }
