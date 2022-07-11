@@ -5,7 +5,7 @@ $(function(){
         slidesToShow : 4,		// 한 화면에 보여질 컨텐츠 개수
         slidesToScroll : 1,		//스크롤 한번에 움직일 컨텐츠 개수
         speed : 100,	 // 다음 버튼 누르고 다음 화면 뜨는데까지 걸리는 시간(ms)
-        arrows : true, 		// 옆으로 이동하는 화살표 표시 여부
+        //arrows : true, 		// 옆으로 이동하는 화살표 표시 여부
         //dots : true, 		// 스크롤바 아래 점으로 페이지네이션 여부
         autoplay : true,			// 자동 스크롤 사용 여부
         autoplaySpeed : 1000, 		// 자동 스크롤 시 다음으로 넘어가는데 걸리는 시간 (ms)
@@ -18,14 +18,21 @@ $(function(){
         
         responsive: [ // 반응형 웹 구현 옵션
             {  
-                breakpoint: 960, //화면 사이즈 960px
+            breakpoint: 936, //화면 사이즈 960px
+            settings: {
+                //위에 옵션이 디폴트 , 여기에 추가하면 그걸로 변경
+                slidesToShow:2 
+            } 
+            },
+            {  
+                breakpoint: 768, //화면 사이즈 960px
                 settings: {
                     //위에 옵션이 디폴트 , 여기에 추가하면 그걸로 변경
                     slidesToShow:2 
                 } 
             },
             { 
-                breakpoint: 768, //화면 사이즈 768px
+                breakpoint: 430, //화면 사이즈 768px
                 settings: {	
                     //위에 옵션이 디폴트 , 여기에 추가하면 그걸로 변경
                     slidesToShow:1 
@@ -34,4 +41,4 @@ $(function(){
         ]
 
     });
-  })
+  });
