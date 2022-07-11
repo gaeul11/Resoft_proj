@@ -31,6 +31,10 @@
 	line-height: 25px;
 }
 
+.map-wrap .map-info-wrap .map-info a {
+	text-decoration-line: none;
+}
+
 .map-wrap .map-info-wrap .map-info a p,
 .map-wrap .map-info-wrap .map-info p:last-child {
 	color: #7b7b7b;
