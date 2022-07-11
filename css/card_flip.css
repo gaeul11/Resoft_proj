@@ -89,7 +89,7 @@ a{
     font-weight: 650;
 }
 
-.img_wrap {
+.img_wrap { /* front 이미지 정렬위해 relative */
     position: relative;
     height: 185px;
 }
@@ -111,14 +111,23 @@ a{
 .flip { /* 카드 */
     display: inline-block;
     box-sizing: border-box;
+    width: calc(100% / 4 - 3%);
+    height: 350px;
+    position: relative;
+    margin: 0 1%;
+    max-width: 43%;
+}
+
+.flip_li { /* 카드 */
+    box-sizing: border-box;
     background-color: #f6f6f6;
     width: calc(100% / 4 - 3%);
     height: 350px;
     position: relative;
     margin: 0 1%;
-    max-width: 308px;
     transform-style: preserve-3d;
     transform: rotateY(0deg);
+    transition: .8s;
     perspective: 1000rem;
     /* 보고 있는 요소의 위치를 추정하여 원근감으로 3D환경 조성
        3D transform과 같이 자주 사용 */
@@ -127,6 +136,10 @@ a{
 .front a { /* 카드 내 중간정렬 */
     /* text-align: center; */
     display: flex;
+    width: 100%;
+    position: absolute;
+    top: 50;
+    left: 50;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -135,24 +148,26 @@ a{
 
 .flip_item {
     visibility: visible;
+    transition: .8s;
+    position: absolute;
 }
 
 .front, .back { /* 뒷 카드 안보이게 */
     backface-visibility: hidden;
+    position: absolute;
 }
 
 .front{
-    position: absolute;
-    transition: 1s;
     transform: rotateY(0deg);
 }
 
 .back{ /* 뒷면은 사전에 미리 뒤집기 */
     transform: rotateY(180deg);
+    top: 100;
 }
 
-.flip:hover { /* 호버 시 뒤집기 */
-    transform: rotateY(180deg); /*y축을 기준으로 180도까지회전*/
+.flip_li:hover { /* 호버 시 뒤집기 */
+    transform: rotateY(180deg); /* y축을 기준으로 180도까지회전 */
     background-color: #000;
 }
 
@@ -171,7 +186,7 @@ a{
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 100%;    
+    width: 100%;
     transform: translate(-50%, -50%);
     font-size: 20px;
     font-family: 'ypseo';
@@ -183,31 +198,42 @@ a{
 
 
 @media (max-width:940px) {
-    .b_wrap {max-width: 940px; padding: 100px 0;}
+    .b_wrap {max-width: 940px; padding: 40px 0;}
     .business_list {flex-wrap: wrap;}
     .flip {
         width: calc(100% / 2 - 4%);
         height: 300px;
-        /* margin-bottom: 30px; */
         margin: 2%;
+    }
+    .flip_li{
+        height: auto;
+    }
+    .front {        
+        background-color: #f6f6f6;
     }
     .front a{
         margin-top: 15%;
     }
-
+    .back{
+        right: -6px;
+        padding: 0 2px;
+    }
     .darken {
         height: 300px;
         width: 100%;
     }
+    .flip:hover .flip_li{
+        background-color: #000;
+    }
 }
 
-/* @media screen and (max-width: 767px) {
+@media screen and (max-width: 767px) {
 	.b_wrap{max-width: 100%; margin: 0 auto; height: auto; padding: 40px 0;}
 	.b_wrap .busi_content_wrap {padding: 60px 20px;}    
-} */
+}
 
 @media (max-width:640px) {
-    .b_wrap {padding: 100px 0;}
+    .b_wrap {padding: 40px 0;}
     .title {font-size: 20px;}
     .subTitleEng {font-size: 13px;}
     .flip {
@@ -224,17 +250,20 @@ a{
         height: 65.44px;
     }
     .darken {
-        height: 300px;
+        height: 250px;
         width: 100%;
     } 
     .front a{
         margin-top: 10%;
     }
+    #lastIconSize {height: 48px;}
 }
 
 @media (max-width:430px) {
+    .b_wrap {padding: 40px 0;}
     .flip {
-        width: 374.41px;
+        max-width: 354.41px;
+        width: 100%;        
         height: 250px;
     }
     .front a{
