@@ -1,13 +1,16 @@
 /*footer*/
+:root {
+  --navy-color: #04088a;
+}
 
 footer {
   width: 100%;
   clear: both;
   position: relative;
-  background: navy;
+  background: var(--navy-color)
 }
 .footer_wrap {
-  background-image: url('./img/footer2.png');
+  background-image: url('../img/footer2.png');
   background-size: cover;
 }
 
