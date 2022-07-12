@@ -1,3 +1,7 @@
+:root {
+  --gray-color: #dddddd;
+}
+
 .header {
   width: 100%;
   height: 830px;
@@ -81,7 +85,7 @@
 }
 
 .header .bannerText-wrap {
-  color: #dddddd;
+  color: var(--gray-color);
   position: absolute;
   top: 35%;
   word-break: normal;
