@@ -1,3 +1,8 @@
+:root {
+    --gray-color: #dddddd;
+    --font-gray-color: #a3a3a3;
+}
+
 .topBtn {
     position: fixed;
     z-index: 99999;
@@ -10,11 +15,11 @@
 .topBtn a{
     font-weight: 500; 
     font-size: 16px; 
-    color: var(#a3a3a3);
+    color: var(--font-gray-color);
     }
 button.move{
     border-radius: 50%; 
-    border: 2px solid var(#dddddd); 
+    border: 2px solid var(--gray-color); 
     background: white; 
     cursor: pointer; 
     margin-bottom: 5px;}

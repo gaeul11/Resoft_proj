@@ -16,7 +16,7 @@
 
 .news_wrap {
   width: 100%;
-  padding: 80px 0;
+  padding: 80px 20px;
   background-color: #f8f8f8;
 }
 .news_wrap .news_content_wrap{
@@ -141,3 +141,32 @@
   font-size: 30px;
 }
 
+/*  cus 영역반응형 적용 */
+
+@media (max-width: 940px){
+  /*  */
+  .cus-wrap{
+    height: auto;
+    margin: 60px 2%;
+    
+  }
+  .cus-wrap .ecoce-bot{
+    width: 75%;
+    position: unset;
+    text-align: left;
+    margin-left: 20px;
+  }
+  .cus_wrap .ecoce-img-wrap .ecoce-img {
+    position: unset;
+  }
+  .ministry-Environ-img {
+    display: none;
+  }
+  .ecoce-img-wrap {
+    width: 85%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 65px;
+    margin-bottom: 30px;
+  }
+}
