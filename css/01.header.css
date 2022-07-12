@@ -2,18 +2,47 @@
   --gray-color: #dddddd;
 }
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.wrapper .top_wrap > a img {
+  left: 170px;
+  position: absolute;
+  padding: 14px;
+  height: 44px;
+}
+
 .header {
-  width: 100%;
+  background: url("../img/헤더배경.png") no-repeat;
   height: 830px;
-  z-index: 9999;
+  width: 100%;
   position: relative;
-  background: url(../img/헤더배경.png) no-repeat;
+  color: #dddddd;
+  background-size: cover;
+  z-index: 999;
   background-repeat: round;
 }
 
-.wrapper {
-  position: relative;
-  max-width: 100%;
+.wrapper .top_wrap>a,
+.wrapper #gnb_m>a {
+    position: absolute;
+    height: 71px;
+}
+
+#gnb_m {
+    display: none;
+}
+
+#menupc-wrapper {
+    position: relative;
+    display: block;
+    z-index: 2;
+    height: 100px;
+    font-size: 15px;
+    color: #fff;
 }
 
 .wrapper {
@@ -33,22 +62,17 @@
   display: block;
   height: auto;
   position: absolute;
-  top: 25%;
+  top: 25%; 
 }
 
-.wrapper a {
-  position: relative;
-  top: 25px;
-  left: 0;
-}
-
-.wrapper a img {
+.wrapper .top_wrap .img-wrap img {
   width: 240px;
 }
 
 .banner-wrap {
   max-width: 1400px;
   margin: 0 auto;
+  /* display: flex; */
   position: relative;
   height: 100%;
 }
@@ -56,39 +80,38 @@
 .banner-wrap .img-wrap {
   position: absolute;
   right: 0;
-  top: 19%;
+  top: 9%;
 }
 
 .header .bannerText {
+  /* position: absolute;
+  top: 25%; */
   padding-bottom: 80px;
 }
+
 .header .bannerText-wrap {
   position: absolute;
   top: 25%;
+  left: 0px;
   word-break: normal;
 }
 
-.header .bannerText p:first-child {
+.header .bannerText .Banner_tit_text {
   font-size: 50px;
   font-weight: 600;
   padding-bottom: 35px;
   line-height: 60px;
+  color: var(--gray-color);
 }
 
-.header .bannerText p:last-child {
+.header .bannerText .Banner_sub_text {
   font-weight: 500;
   line-height: 20px;
+  color: var(--gray-color);
 }
 
 .header .bannerText p:last-child span:nth-child(3) {
   display: block;
-}
-
-.header .bannerText-wrap {
-  color: var(--gray-color);
-  position: absolute;
-  top: 35%;
-  word-break: normal;
 }
 
 /* header 미디어쿼리  */

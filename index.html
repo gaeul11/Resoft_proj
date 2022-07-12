@@ -9,8 +9,10 @@
   <!-- 파비콘 연결 -->
   <link rel="shortcut icon" href="./img/web.png">
 
-  <!-- 폰트어썸 -->
+  <!-- 폰트 -->
   <script src="https://kit.fontawesome.com/af2a9fd141.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
 
   <!-- 지도 -->
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -27,8 +29,15 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
   <!-- slick - slider script  -->
   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-  <!-- slick-slider js -->
-  <script src="./js/slide.js"></script>
+
+  <!-- 07. top Btn JS -->
+  <script src="./js/00.top.js"> </script>
+  <!-- 03. slick-slider js -->
+  <script src="./js/03.slide.js"></script>
+  <!-- 04. iconP JS -->
+	<script src="./js/05.iconP.js"></script>
+  <!-- 05. kakao_api -->
+  <script src="./js/06.kakao_api.js"></script>
 
   <!-- wow 라이브러리 css -->
   <link rel="stylesheet" href="./css/animate.css">
@@ -40,22 +49,24 @@
 
   <!-- css reset -->
   <link rel="stylesheet" href="./css/reset.css">
+  <!-- animate css -->
+  <link rel="stylesheet" href="./css/animate.css">
+  <!-- 00. top 버튼 CSS -->
+  <link rel="stylesheet" href="./css/00.top.css">
   <!-- 01.header -->
   <link rel="stylesheet" href="./css/01.header.css">
   <!-- 02.card-flip -->
   <link rel="stylesheet" href="./css/02.card_flip.css">
-  <!-- 03.slide and cus -->
-  <link rel="stylesheet" href="./css/03.slick-cus.css">
-  <!-- 04.icon -->
-  <link rel="stylesheet" href="./css/04.iconP.css">
-  <!-- 05. kakao_api -->
-  <link rel="stylesheet" type="text/css" href="./css/05.kakao_api.css">
-  <!-- 06.footer -->
-  <link rel="stylesheet" href="./css/06.footer.css">
-  <!-- 07. top 버튼 CSS -->
-  <link rel="stylesheet" href="./css/07.top.css">
-  <!-- animate css -->
-  <link rel="stylesheet" href="./css/animate.css">
+  <!-- 03.slide -->
+  <link rel="stylesheet" href="./css/03.slick.css">
+  <!-- 04.cus -->
+  <link rel="stylesheet" href="./css/04.cus.css">
+  <!-- 05.icon -->
+  <link rel="stylesheet" href="./css/05.iconP.css">
+  <!-- 06. kakao_api -->
+  <link rel="stylesheet" type="text/css" href="./css/06.kakao_api.css">
+  <!-- 07.footer -->
+  <link rel="stylesheet" href="./css/07.footer.css">
 </head>
 
 <body>
@@ -63,47 +74,34 @@
     <button class="move" id="topBtn" href="#"><i class="fa-solid fa-angle-up"></i></button>
     <a id="topBtn">TOP</a>
   </div>
-  <!-- ★스크립트 파일 분리 필요 -->
-  <script>
-    $(function () {
-      // 보이기 | 숨기기
-      $(window).scroll(function () {
-        if ($(this).scrollTop() > 250) { //250 넘으면 버튼이 보여짐니다.
-          $('#topBtn, a#topBtn').fadeIn();
-        } else {
-          $('#topBtn, a#topBtn').fadeOut();
-        }
-      });
-      // 버튼 클릭시
-      $("#topBtn").click(function () {
-        $('html, body').animate({
-          scrollTop: 0    // 0 까지 animation 이동합니다.
-        }, 400);          // 속도 400
-        return false;
-      });
-    });
-  </script>
-  <!-- ★스크립트 파일 분리 필요 -->
+  <!-- ★스크립트 파일 분리 완료 -->
   <!-- topBtn 끝 -->
   
   <header class="header">
     <div class="wrapper">
-      <div class="top_wrap">
-        <div class="img-wrap">
-          <a href="#"><img src="./img/리소프트로고.png" alt=메인로고></a>
+      <div id="menupc-wrapper">
+        <div class="top_wrap">
+          <div class="img-wrap"><a href=""><img src="./img/리소프트로고.png" alt="logo"></a></div>
+        </div>
+      </div>
+      <div id="gnb_m">
+        <div class="top_wrap">
+          <a href="/">
+            <img src="./img/리소프트로고.png" alt="로고">
+          </a>
         </div>
       </div>
     </div>
     <div class="banner-wrap">
-      <div class="bannerText-wrap fadeInLeft">
+      <div class="bannerText-wrap wow fadeInLeft" data-wow-delay="0.3s"
+        style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
         <div class="bannerText">
-          <p>Evolution<br>
-            With New Software
+          <p class="Banner_tit_text">
+            Evolution<br>With New Software
           </p>
-          <p>
+          <p class="Banner_sub_text">
             <span>Mobile APP(Android/iOS) Development, </span>
-            <span>AI Bigdata Analysis, MetaVerse,
-            </span><br>
+            <span>AI Bigdata Analysis, MetaVerse, </span>
             <span>
               <span>Responsive WEBsite, Brand Design Launch, </span>
               <span>ICT Consulting</span>
@@ -112,7 +110,8 @@
         </div>
       </div>
       <div class="img-wrap">
-        <img src="./img/메인뇌.png" alt="" class="fadeInRight">
+        <img src="./img/메인뇌.png" alt class="wow fadeInRight" data-wow-delay="0.5s"
+          style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInRight;">
       </div>
     </div>
   </header>
@@ -221,7 +220,7 @@
   <div class="news_wrap">
     <div class="news_content_wrap">
       <div class="title tit_center">
-        <h2> 프로젝트 </h2>
+        <h2 class="h-title"> 프로젝트 </h2>
         <p class="subTitleEng"> resoft projects</p>
       </div>
     </div>
@@ -273,15 +272,17 @@
 
   <!-- slide 끝 -->
 
-  <div class="cus-wrap">
-    <img class="ecoce-bot wow fadeInDown" src="./img/에코스봇.png" alt="에코스봇">
-    <img class="ministry-Environ-img wow fadeInRight" src="./img/환경부탄소중립기본법.png" alt="">
+  <div class="cus_wrap">
+    <img src="./img/에코스봇.png" class="ecoce-bot wow fadeInDown" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInDown;" alt="에코스봇">
+    <img src="./img/환경부탄소중립기본법.png" class="ministry-Environ-img wow fadeInRight" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeRight;" alt="">
     <div class="ecoce-img-wrap">
-      <img class="ecoce-img wow fadeInLeft" src="./img/에코스모바일.png" alt="">
+      <img src="./img/에코스모바일원.png" class="ecoce-img wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;"alt="" >
     </div>
     <div class="eco-clean-earth wow fadeInRight" data-wow-delay="0.6s"
       style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInRight;">
-      <p>국내 최초 <br>
+      <p>
+        국내 최초
+        <br>
         ❛ 탄소중립 실천인증 플랫폼 ❜
       </p>
       <p>ECO-Clean Earth</p>
@@ -301,7 +302,6 @@
 
   <div class="clients-img-wrap ">
     <ul>
-
       <li class="wow fadeInUp customer_list" data-wow-delay="0.1s"
         style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
         <div class="img-wrap">
@@ -374,8 +374,6 @@
         <p>국민의힘</p>
       </li>
 
-
-
       <li class="wow fadeInUp customer_list" data-wow-delay="1.8s"
         style="visibility: visible; animation-delay: 1.8s; animation-name: fadeInUp;">
         <div class="img-wrap">
@@ -447,8 +445,6 @@
         </div>
         <p>목포해양대학교</p>
       </li>
-
-
 
       <li class="wow fadeInUp customer_list" data-wow-delay="2.0s" data-wow-offset="-30"
         style="visibility: visible; animation-delay: 2s; animation-name: fadeInUp;">
@@ -526,95 +522,7 @@
   </div>
   <!-- iconP 끝 -->
 
-  <!-- ★ 스크립트 파일 분리 필요 -->
-  <script>
-    // 아이콘 8개
-    if (window.matchMedia("screen and (max-width: 1217px)").matches) {
-      $(function () {
-        $(".customer_list").hide();
-        var array = [];
-        var list = document.getElementsByClassName('customer_list');
-
-        for (var i = 0; i < list.length; i++) {
-          array.push(list[i]);
-        }
-
-        var visiArray = [];
-        visiArray = array.slice(0, 8);
-        visiArray = visiArray.concat(array.slice(8, 16).reverse());
-        visiArray = visiArray.concat(array.slice(16, 24));
-
-        var second = 0;
-        for (var i = 0; i < visiArray.length; i++) {
-          second = second + 0.1;
-          visiArray[i].setAttribute('data-wow-delay', second + 's')
-          visiArray[i].style.display = 'block';
-        }
-
-        var load = document.getElementsByClassName('load')[0];
-        //숨겨진 아이콘
-        load.addEventListener('click', function (e) {
-          e.preventDefault();
-          var hiddenArray = [];
-          hiddenArray = array.slice(24, 27);
-
-          var hSecond = 0;
-          for (var i = 0; i < hiddenArray.length; i++) {
-            hSecond = hSecond + 0.1;
-            hiddenArray[i].setAttribute('data-wow-delay', hSecond + 's');
-            hiddenArray[i].style.display = 'block';
-          }
-          load.style.display = "none";
-
-          window.scrollTo(0, window.pageYOffset + 1);
-          window.scrollTo(0, window.pageYOffset - 1);
-        });
-      });
-    }
-    // 아이콘 4개
-    if (window.matchMedia("screen and (max-width: 940px)").matches) {
-      $(function () {
-        $(".customer_list").hide();
-        var list = document.getElementsByClassName('customer_list');
-        var hiddenArray = [];
-        var openArray = [];
-        $(".customer_list").slice(0, 12).show();
-        for (var i = 0; i < list.length; i++) {
-          if (list[i].style.display == "none") {
-            hiddenArray.push(list[i]);
-          } else {
-            openArray.push(list[i]);
-          }
-        }
-        // 보여진 아이콘
-        var second = 0
-        for (var i = 0; i < openArray.length; i++) {
-          second = second + 0.1
-          openArray[i].setAttribute('data-wow-delay', second + 's');
-        }
-        //숨겨진 아이콘
-        var hSecond = 0;
-        $(".load").click(function (e) {
-          e.preventDefault();
-          for (var i = 0; i < hiddenArray.length; i++) {
-            hSecond = hSecond + 0.1;
-            hiddenArray[i].setAttribute('data-wow-delay', hSecond + 's');
-            hiddenArray[i].style.display = 'block';
-            if ($(".customer_list:hidden").length == 0) {
-              $(".load").hide();
-            }
-          };
-        });
-        window.scrollTo(0, window.pageYOffset + 1);
-        window.scrollTo(0, window.pageYOffset - 1);
-      })
-    }
-    function preventClick(e) {
-      e.preventDefault()
-    }
-  </script>
-  <!-- iconP 끝 -->
-  <!-- ★ iconP 스크립트 파일 분리 필요 -->
+  <!-- ★ 스크립트 파일 분리 완료 -->
 
   <div class="map-wrap">
     <div id="map" class="indexKakaoMap wow fadeIn" data-wow-delay="0.3s"></div>
@@ -645,63 +553,61 @@
       </div>
     </div>
   </div>
-  <!-- kakao_api 끝 -->
 
   <!-- ★ 스크립트 분리 완료 -->
   <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=067f7b942819e19fc2f3202be6e39efd"></script>
-  <script src="./js/kakao_api.js"></script>
   <!-- kakao_api 끝 -->
-  <!-- ★ 스크립트 분리 완료-->
 
   <footer>
     <div class="footer_wrap">
-      <div class="img-wrap">
-        <img src="./img/푸터로고.png" alt="footer_logo">
-      </div>
-      <div class="footer_content">
-        <p class="footer_content_wht">주식회사 리소프트는 새로운 소프트웨어로 진화하여 여러분께 응답드리고자 노력하겠습니다.</p>
-        <div class="footer_info_wrap">
-          <div class="footer_info">
-            <p>
-              <span>상호. </span>
-              <span>(주)리소프트</span>
-            </p>
-            <p>
-              <span>대표이사.</span>
-              <span>오유나</span>
-            </p>
-            <p>
-              <span>사업자등록번호.</span>
-              <span>722-81-02219</span>
-            </p>
-            <p>
-              <span>개인정보책임자.</span>
-              <span>이현지</span>
-            </p>
-            <pre></pre>
-            <p>
-              <span>주소.</span>
-              <span>(41260) 대구광역시 동구 동대구로 465, 대구스케일업허브(DASH) 713호 (신천동 106)</span>
-            </p>
-            <p>
-              <span>전화.</span>
-              <span>(053) 475-2110</span>
-              <i class="fa-solid fa-pipe"></i>
-            </p>
-            <p>
-              <span>팩스.</span>
-              <span>(0504)257-5966</span>
-            </p>
-            <p>
-              <span>이메일.</span>
-              <span>call@resoft.kr</span>
-            </p>
-          </div>
-        </div><br>
-        <p class="copyright">Copyright(c) RESOFT CO.LTD. All right reserved.</p>
-      </div>
+        <div class="img-wrap">
+            <img src="./img/푸터로고.png" alt="footer_logo">
+        </div>
+        <div class="footer_content">
+            <p class="footer_content_wht">주식회사 리소프트는 새로운 소프트웨어로 진화하여 여러분께 응답드리고자 노력하겠습니다.</p>
+            <div class="footer_info_wrap">
+                <div class="footer_info">
+                    <p>
+                      <span>상호. </span>
+                      <span>(주)리소프트</span>
+                    </p>
+                    <p>
+                      <span>대표이사.</span>
+                      <span>오유나</span>
+                    </p>
+                    <p>
+                      <span>사업자등록번호.</span>
+                      <span>722-81-02219</span>
+                    </p>
+                    <p>
+                      <span>개인정보책임자.</span>
+                      <span>이현지</span>
+                    </p>
+                    <pre>
+                    </pre>
+                    <p>
+                      <span>주소.</span>
+                      <span>(41260) 대구광역시 동구 동대구로 465, 대구스케일업허브(DASH) 713호 (신천동 106)</span>
+                    </p>
+                    <p>
+                      <span>전화.</span>
+                        <span>(053) 475-2110</span>
+                      <i class="fa-solid fa-pipe"></i>
+                    </p>
+                    <p>
+                      <span>팩스.</span>
+                      <span>(0504)257-5966</span>
+                    </p>
+                    <p>
+                    <span>이메일.</span>
+                    <span>call@resoft.kr</span>
+                    </p>
+                </div>
+            </div><br>
+            <p class="copyright">Copyright(c) RESOFT CO.LTD. All right reserved.</p>
+        </div>
     </div>
-  </footer>
+</footer>
   <!-- footer 끝 -->
 </body>
 
