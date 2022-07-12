@@ -23,23 +23,12 @@
     width: 100%;
 }
 
-.title, .subTitleEng {
-    font-family: 'Noto Sans KR', sans-serif;
-}
-
-.title {    
+.center_wrap .front .title {    
     color: #2e2e2e;
     font-size: 23px;
     margin: 10px 0;
     letter-spacing: -1px;
     font-weight: 550;   
-}
-
-.subTitleEng {
-    color: #ee7ed8;
-    font-size: 15px;
-    letter-spacing: 3px;
-    font-weight: 650;
 }
 
 .img_wrap { /* front 이미지 정렬위해 relative */
@@ -80,14 +69,13 @@
     margin: 0 1%;
     transform-style: preserve-3d;
     transform: rotateY(0deg);
-    transition: .8s;
+    /* transition: .8s; */
     perspective: 1000rem;
     /* 보고 있는 요소의 위치를 추정하여 원근감으로 3D환경 조성
        3D transform과 같이 자주 사용 */
 }
 
 .front a { /* 카드 내 중간정렬 */
-    /* text-align: center; */
     display: flex;
     width: 100%;
     position: absolute;
@@ -101,7 +89,6 @@
 
 .flip_item {
     visibility: visible;
-    transition: .8s;
     position: absolute;
 }
 
@@ -122,6 +109,7 @@
 .flip_li:hover { /* 호버 시 뒤집기 */
     transform: rotateY(180deg); /* y축을 기준으로 180도까지회전 */
     background-color: #000;
+    transition: .8s;
 }
 
 .layoutImg img {
@@ -174,9 +162,6 @@
     .darken {
         height: 300px;
         width: 100%;
-    }
-    .flip:hover .flip_li{
-        background-color: #000;
     }
 }
 
