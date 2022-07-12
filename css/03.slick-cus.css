@@ -2,13 +2,16 @@
   v2.0 | 20110126
   License: none (public domain)
 */
-* {
-  box-sizing: border-box;
-}
+
 :root {
   --navy-color: #04088a;
   --pink-color: #ee72d8;
 }
+
+* {
+  box-sizing: border-box;
+}
+
 /* slide 영역 */
 
 .news_wrap {
@@ -29,9 +32,10 @@
   font-size: 42px;
   font-weight: 600;
   color: var(--navy-color);
+  padding: 10px 20px;
 }
 
-.p-sub_title{
+.subTitleEng{
   text-transform: uppercase;
   text-align: center;
   color: var(--pink-color);
@@ -40,14 +44,14 @@
   letter-spacing: 3px;
 }
 
-.cotainer_slider {
+.container_slider {
   max-width: 1400px;
   margin: 55px auto;
   clear: both;
+  
 }
-.cotainer_slider .slide_box{
+.container_slider .slide_box{
   overflow: hidden;
-
 } 
 .slide_box .slide_list {
   width: 330px;
@@ -136,3 +140,4 @@
 .cus-wrap .eco-clean-earth p:last-child {
   font-size: 30px;
 }
+
