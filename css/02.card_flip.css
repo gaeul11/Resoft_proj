@@ -68,7 +68,6 @@
     position: relative;
     margin: 0 1%;
     transform-style: preserve-3d;
-    transform: rotateY(0deg);
     /* transition: .8s; */
     perspective: 1000rem;
     /* 보고 있는 요소의 위치를 추정하여 원근감으로 3D환경 조성
@@ -97,19 +96,26 @@
     position: absolute;
 }
 
-.front{
-    transform: rotateY(0deg);
+.back{ /* 뒷면은 사전에 미리 뒤집기 */
+    transform: rotateY(-180deg);
 }
 
-.back{ /* 뒷면은 사전에 미리 뒤집기 */
-    transform: rotateY(180deg);
-    top: 100;
+.flip_li {
+    transform-style: preserve-3d;
+    transition: transform .8s;
+    perspective: 1000rem;
 }
 
 .flip_li:hover { /* 호버 시 뒤집기 */
+     transform: rotateY(180deg); /* y축을 기준으로 180도까지회전 */
+}
+/* 호버 시 뒤집기 */
+.b_wrap .business_list .flip:hover .front{
     transform: rotateY(180deg); /* y축을 기준으로 180도까지회전 */
-    background-color: #000;
-    transition: .8s;
+}
+.b_wrap .business_list .flip:hover .back{
+    transform: rotateY(180deg);
+    /* background-color: #000; */
 }
 
 .layoutImg img {
@@ -125,16 +131,17 @@
 
 .app-text { /* 뒷 카드 text */
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: calc(50% - 50px);
+    /* left: 50%; */
     width: 100%;
-    transform: translate(-50%, -50%);
+    /* transform: translate(-50%, -50%); */
     font-size: 20px;
     font-family: 'ypseo';
     text-align: center;
     color: #ffffff;
     font-weight: 400;
     line-height: 1.8;
+    transform: rotateY(0deg);
 }
 
 
