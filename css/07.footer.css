@@ -3,6 +3,10 @@
   --navy-color: #04088a;
 }
 
+body {
+  font-family: 'Montserrat', 'Noto Sans KR';
+}
+
 footer {
   width: 100%;
   clear: both;

@@ -1,4 +1,15 @@
 /* card flip 효과 */
+:root {
+    --navy-color: #04088a;
+    --gray-color: #dddddd;
+    --font-gray-color: #a3a3a3;
+    --lightnavy-color: #0806d1;
+}
+
+body {
+    font-family: 'Montserrat', 'Noto Sans KR';
+}
+
 .b_wrap {
     padding: 200px 0;
     overflow: hidden;
@@ -62,7 +73,7 @@
 
 .flip_li { /* 카드 */
     box-sizing: border-box;
-    background-color: #f6f6f6;
+    background-color: #fff;
     width: calc(100% / 4 - 3%);
     height: 350px;
     position: relative;
@@ -72,6 +83,9 @@
     perspective: 1000rem;
     /* 보고 있는 요소의 위치를 추정하여 원근감으로 3D환경 조성
        3D transform과 같이 자주 사용 */
+    box-shadow:
+    0 19px 38px rgba(0,0,0,0.15),
+    0 15px 12px rgba(0,0,0,0.11);
 }
 
 .front a { /* 카드 내 중간정렬 */
@@ -157,7 +171,7 @@
         height: 100%;
     }
     .front {        
-        background-color: #f6f6f6;
+        background-color: #fff;
     }
     .front a{
         margin-top: 15%;
