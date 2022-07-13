@@ -161,6 +161,11 @@
     display: inline;
   }
 
+  .wrapper a img{    
+    width: 147px;
+    padding: 14px;
+  }
+
   .wrapper .top_wrap>a img {
     position: unset;
   }
@@ -180,10 +185,9 @@
     line-height: 45px;
   }
 
-  .header .bannerText-wrap {
-    left: 30%;
+  .header .bannerText-wrap {    
+    left: calc(50% - 168px);
     top: 45%;
-
   }
 
   .header .banner-wrap .img-wrap {
@@ -196,6 +200,10 @@
 
   .header .banner-wrap .img-wrap img {
     width: 100%;
+  }
+
+  .wrapper a {
+    top: 0;
   }
 
   .wrapper {
