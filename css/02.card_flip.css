@@ -68,7 +68,7 @@
     position: relative;
     margin: 0 1%;
     transform-style: preserve-3d;
-    /* transition: .8s; */
+    transition: .8s;
     perspective: 1000rem;
     /* 보고 있는 요소의 위치를 추정하여 원근감으로 3D환경 조성
        3D transform과 같이 자주 사용 */
@@ -102,13 +102,10 @@
 
 .back{ /* 뒷면은 사전에 미리 뒤집기 */
     transform: rotateY(180deg);
-    /* top: 100; */
 }
 
 .flip_li:hover { /* 호버 시 뒤집기 */
-    /* transform: rotateY(180deg); */ /* y축을 기준으로 180도까지회전 */
-    background-color: #000;
-    /* transition: .8s; */
+     transform: rotateY(180deg); /* y축을 기준으로 180도까지회전 */
 }
 /* 호버 시 뒤집기 */
 .b_wrap .business_list .flip:hover .front{
