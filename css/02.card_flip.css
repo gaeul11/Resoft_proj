@@ -83,6 +83,9 @@ body {
     perspective: 1000rem;
     /* 보고 있는 요소의 위치를 추정하여 원근감으로 3D환경 조성
        3D transform과 같이 자주 사용 */
+    box-shadow:
+    0 3px 7px rgba(0,0,0,0.15),
+    0 3px 7px rgba(0,0,0,0.11);
 }
 
 .front a { /* 카드 내 중간정렬 */
@@ -97,18 +100,13 @@ body {
     margin-top: 25%;
 }
 
-.flip_item {
-    visibility: visible;
-    position: absolute;
-}
-
 .front, .back { /* 뒷 카드 안보이게 */
     backface-visibility: hidden;
     position: absolute;
 }
 
 .back{ /* 뒷면은 사전에 미리 뒤집기 */
-    transform: rotateY(-180deg);
+    transform: rotateY(180deg);
 }
 
 .flip_li {
@@ -117,16 +115,12 @@ body {
     perspective: 1000rem;
 }
 
-.flip_li:hover { /* 호버 시 뒤집기 */
-     transform: rotateY(180deg); /* y축을 기준으로 180도까지회전 */
-}
 /* 호버 시 뒤집기 */
 .b_wrap .business_list .flip:hover .front{
     transform: rotateY(180deg); /* y축을 기준으로 180도까지회전 */
 }
 .b_wrap .business_list .flip:hover .back{
     transform: rotateY(180deg);
-    /* background-color: #000; */
 }
 
 .layoutImg img {
