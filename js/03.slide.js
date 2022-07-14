@@ -20,21 +20,21 @@ $(function(){
         responsive: [ // 반응형 웹 구현 옵션
                     // breakpoint : 적용할 화면 크기 px
             {  
-            breakpoint: 936, 
+            breakpoint: 942, 
             settings: {
                 //위에 옵션이 디폴트 , 여기에 추가하면 그걸로 변경
                 slidesToShow:3 
             } 
             },
             {  
-                breakpoint: 768, 
+                breakpoint: 772, 
                 settings: {
                     //위에 옵션이 디폴트 , 여기에 추가하면 그걸로 변경
                     slidesToShow:2 
                 } 
             },
             { 
-                breakpoint: 430, 
+                breakpoint: 436, 
                 settings: {	
                     //위에 옵션이 디폴트 , 여기에 추가하면 그걸로 변경
                     slidesToShow:1 
