@@ -16,7 +16,7 @@
 }
 
 body {
-  font-family: 'Montserrat', 'Noto Sans KR';
+  font-family: 'Montserrat', 'Noto Sans KR'; word-break: keep-all;
 }
 
 /* slide 영역 */
@@ -62,7 +62,6 @@ body {
   overflow: hidden;
 } 
 .slide_box .slide_list {
-  width: 330px;
   height: 300px;
   background-color: #ffffff;
   box-sizing: border-box;
@@ -86,8 +85,12 @@ body {
   letter-spacing: -0.4px;
   line-height: 1.5;
 }
+.slide_box .slide_list_item:hover img{
+  transform: scale(1.2);
+}
 .slide_box img {
   width: 100%;
   transform: scale(1);
   transition: transform .3s;
+  object-fit: contain;
 }
