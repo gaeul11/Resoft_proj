@@ -162,6 +162,25 @@ element.style {
     font-size: 70px;}
 }
 
+@media screen and (max-width: 500px){
+  .clients-img-wrap ul li .img-wrap {
+      width: 22vw;
+      height: 22vw;
+    }
+      .box_wrap img{
+          margin: 53px 0;
+      }
+    .box_wrap{
+          height: 380px;
+      }
+  .clients-img-wrap ul li img {
+      padding: 12px;
+  }
+  .clients-img-wrap ul li p {
+      font-size: 14px;
+  }
+  }
+
 
 
 
