@@ -11,6 +11,9 @@
 * {
   box-sizing: border-box;
 }
+body {
+  font-family: 'Montserrat', 'Noto Sans KR';
+}
 div {
   display: block;
 }
