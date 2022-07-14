@@ -73,7 +73,7 @@ body {
 
 .flip_li { /* 카드 */
     box-sizing: border-box;
-    background-color: #fff;
+    background-color: #f6f6f6;
     width: calc(100% / 4 - 3%);
     height: 350px;
     position: relative;
@@ -83,9 +83,6 @@ body {
     perspective: 1000rem;
     /* 보고 있는 요소의 위치를 추정하여 원근감으로 3D환경 조성
        3D transform과 같이 자주 사용 */
-    box-shadow:
-    0 19px 38px rgba(0,0,0,0.15),
-    0 15px 12px rgba(0,0,0,0.11);
 }
 
 .front a { /* 카드 내 중간정렬 */
@@ -171,7 +168,7 @@ body {
         height: 100%;
     }
     .front {        
-        background-color: #fff;
+        background-color: #f6f6f6;
     }
     .front a{
         margin-top: 15%;

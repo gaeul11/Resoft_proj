@@ -10,7 +10,7 @@ var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리
 // 마커가 표시될 위치입니다 
 var markerPosition = new kakao.maps.LatLng(35.871691843254716, 128.62496478375644);
 
-var imageSrc = '../img/지도마커.png', // 마커이미지의 주소입니다    
+var imageSrc = './img/지도마커.png', // 마커이미지의 주소입니다    
     imageSize = new kakao.maps.Size(220, 45), // 마커이미지의 크기입니다
     imageOption = {
         offset: new kakao.maps.Point(27, 69)
